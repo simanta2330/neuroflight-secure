@@ -1,1 +1,32 @@
+A vehicle that flies without a human is called an Unmanned Aerial Vehicle (UAV). In a digital UAV system there can be many security vulnerabilities. First we have to know what equipment is used in an UAV system.
+These are…
 
+-CPU & RAM
+-Some type of communication system (either through Wi-Fi or other radio frequency) 
+-A camera for photography and video 
+-Some sort of data storage for files and an operating system
+-Some types of sensors, the most common of which is GPS 
+-A battery
+-Aeronautical hardware for flight 
+-A controller for manual flight operations
+
+Several types of cyber attack can happen in this system….
+* De-authentication Attack: This is an attack which is related to the Wifi network. It can happen through a mobile device or an app system. In this attack hacker broke the connection between the vehicle and controller as a result the drone lost its control and fell down. An attacker uses the vehicle's MAC address and sends a hang-up packet that disconnects the connection.
+How can we defend this vulnerability: Drone can back to the  take-off point safely, can ground themself on the spot safely or use firewall
+* GPS Spoofing: In this attack system attackers create a strong GPS signal that prevents the original GPS signal then the drone response to that hacker’s GPS. How can we defend this attack:
+We can use a pre-trained ai model to predict normal flight paths.
+Use multi GNSS & Multi frequency receivers (AI can choose reliable signals)
+* GPS Jamming: It’s a well known attack for military war since many years. As a satellite GPS signal is literally weak so that it can easily happen. If an attacker able to create a strong signal for drone than satellite signal then the drone take that strong signal
+Prevention is the same as with GPS spoofing.
+
+* Man-in-the-Middle Attack: It’s also a well known attack for drone security. In this attack system an attack can stay between two systems. They are able to take access to these two systems at a time. Attacker changes the communication location. How to prevent:
+Communication Encryption
+Mutual Authentication
+Secure protocols only
+
+* Session Hijacking: It’s an attack which combines De-authentication and MITM attacks. In this system an attacker takes the access to both vehicles at the same time. How to prevent:    
+Use secure session tokens
+Encrypt All Communications (TLS/SSL/VPN)
+Use Session Timeouts and Rotation     
+                                                   
+* Attacking Geofences: Geofencing technology uses GPS, GNSS,Wifi,Bluetooth & IP Address. A standard area that is fixed for a drone to fly. The vehicle will not cross that boundary. An attacker can change the area as a result the drone can’t understand their area. This system uses GPS Spoofing, MITM, Sensor Manipulation (IMU,Altimeter) 
